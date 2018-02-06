@@ -4,31 +4,55 @@
     <div class="container">
     <form action="" method="GET">
         <select name="category">
-                <option>all</option>
-                <option>walking</option>
-                <option>cycling</option>
+                <option>All</option>
+                <option>Car</option>
+                <option>Walking</option>
         </select>
-        <input type="submit">
+        <input type="submit" value="Select">
     </form>
-        @if($_GET['category'] == 'all')
+        @if($_GET['category'] == 'All')
             
             @foreach($activity as $activitys)
-
+            <div class="col-lg-12">
+                <br>
+                <div class="col-lg-2">
+                    {{$activitys->name}}
+                </div>
+                <div class="col-lg-10">
                 {{$activitys->activity}}
+                </div>
+            </div>
+
 
             @endforeach
+
         @endif
-        @if($_GET['category'] == 'walking')
+        @if($_GET['category'] == 'Walking')
             @foreach($walking as $walkings)
-
+                <div class="col-lg-12">
+                    <br>
+                    <div class="col-lg-2">
+                        {{$walkings->name}}
+                    </div>
+                    <div class="col-lg-10">
             {{$walkings->activity}}
+                    </div>
+                </div>
+
 
             @endforeach
         @endif
-        @if($_GET['category'] == 'cycling')
-            @foreach($cycling as $cyclings)
-
-                {{$cyclings->activity}}
+        @if($_GET['category'] == 'Car')
+            @foreach($cars as $car)
+                <div class="col-lg-12">
+                    <br>
+                    <div class="col-lg-2">
+                        {{$car->name}}
+                    </div>
+                    <div class="col-lg-10">
+                {{$car->activity}}
+                    </div>
+                </div>
 
             @endforeach
         @endif

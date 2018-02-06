@@ -17,9 +17,9 @@ class ActivityController extends Controller
         //
         $activity = Activity::all();
         $walking = $activity->where('category', 'walking');
-        $cycling = $activity->where('category', 'cycling');
+        $cars = $activity->where('category', 'car');
 
-        return view('activity', compact( 'activity' ,'walking', 'cycling'));
+        return view('activity', compact( 'activity' ,'walking', 'cars'));
 
 
     }
