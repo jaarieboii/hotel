@@ -4,14 +4,14 @@
     <div class="container">
     <form action="" method="GET">
         <select name="category">
-            @foreach($activity as $activitys)
-                <option>{{$activitys->category}}</option>
-            @endforeach
                 <option>all</option>
+                <option>walking</option>
+                <option>cycling</option>
         </select>
         <input type="submit">
     </form>
         @if($_GET['category'] == 'all')
+            
             @foreach($activity as $activitys)
 
                 {{$activitys->activity}}
