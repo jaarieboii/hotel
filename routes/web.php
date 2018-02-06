@@ -16,9 +16,7 @@ Route::get('/', 'NewsController@index');
 Route::get('/waw', function(){
    return view('waw');
 });
-Route::get('/activity', function(){
-    return view('activity');
-});
+Route::get('/activity', 'ActivityController@index');
 
 
 
