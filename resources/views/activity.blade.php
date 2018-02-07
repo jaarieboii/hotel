@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="container">
     <form action="" method="GET">
         <select name="category">
@@ -10,6 +11,18 @@
         </select>
         <input type="submit" value="Select">
     </form>
+    @if(isset($_GET['category']))
+            @foreach($activity as $activitys)
+                <div class="col-lg-12">
+                    <br>
+                    <div class="col-lg-2">
+                        {{$activitys->name}}
+                    </div>
+                    <div class="col-lg-10">
+                        {{$activitys->activity}}
+                    </div>
+                </div>
+            @endforeach
         @if($_GET['category'] == 'All')
             
             @foreach($activity as $activitys)
@@ -55,6 +68,7 @@
                 </div>
 
             @endforeach
+        @endif
         @endif
     </div>
     @endsection
