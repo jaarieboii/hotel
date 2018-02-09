@@ -11,6 +11,23 @@
         </select>
         <input type="submit" value="Select">
     </form>
+    @if(empty($_GET['category']))
+        @foreach($activity as $activitys)
+                <div class="col-lg-12">
+                    <br>
+                    <div class="col-lg-2">
+                        {{$activitys->name}}
+                    </div>
+                    <div class="col-lg-10">
+                        {{$activitys->activity}}
+                    </div>
+                </div>
+
+
+            @endforeach
+
+        @endif
+
     @if(isset($_GET['category']))
         @if($_GET['category'] == 'All')
             
