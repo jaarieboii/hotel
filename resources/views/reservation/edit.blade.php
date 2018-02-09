@@ -31,6 +31,10 @@
         </select>
     </div>
     <div class="form-group">
+        <label for="dog">Dog</label>
+        <input type="number" min="0" max="1" class="form-control" id="dog" placeholder="Dog" name="dog" value="{{$reservation->dog}}">
+    </div>
+    <div class="form-group">
         <label for="start">Start date</label>
         <input type="date" class="form-control" id="start" placeholder="Start date" name="start" value="{{$reservation->start}}">
     </div>

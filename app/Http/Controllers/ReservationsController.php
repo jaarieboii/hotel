@@ -74,7 +74,7 @@ class ReservationsController extends Controller
 
         $reservation->save();
 
-        //return redirect('/');
+        return redirect('reservation');
     }
 
     /**
@@ -124,7 +124,7 @@ class ReservationsController extends Controller
             'start' => 'required',
             'end' => 'required',
             'persons' => 'required',
-            'dog' => 'required',
+
         ]);
         $reservation = Reservation::find($id);
 
@@ -138,7 +138,7 @@ class ReservationsController extends Controller
         $reservation->dog = request('dog');
         $reservation->save();
 
-        return redirect('/');
+        return redirect('reservation');
     }
 
     /**

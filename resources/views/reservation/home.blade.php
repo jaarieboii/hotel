@@ -12,7 +12,7 @@
         <th>Room type</th>
         <th>Start date</th>
         <th>End date</th>
-        <th>User id</th>
+        <th>Dog</th>
     </tr>
     </thead>
     <tbody>
@@ -28,7 +28,7 @@
             <td>{{$res->roomtype}}</td>
             <td>{{$res->start}}</td>
             <td>{{$res->end}}</td>
-            <td>{{$res->user_id}}</td>
+            <td>{{$res->dog}}</td>
             <td>
             <form action="/reservation/{{$res->id}}/edit">
             <button type="submit" class="btn btn-primary">Update</button>
