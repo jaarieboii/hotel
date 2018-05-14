@@ -21,7 +21,6 @@
     @foreach($reservation as $res)
         @if(Auth::user()->id == $res->user_id))
         <tr>
-            <td>{{$res->id}}</td>
             <td>{{$res->firstname}}</td>
             <td>{{$res->lastname}}</td>
             <td>{{$res->number}}</td>
