@@ -25,7 +25,7 @@
 
     <div class="form-group">
         <label for="roomtype">Room Type</label>
-        <select type="text" max="3" class="form-control" id="roomtype" placeholder="Select Room type" name="roomtype">
+        <select type="text" max="4" class="form-control" id="roomtype" placeholder="Select Room type" name="roomtype">
             @foreach($roomtype as $type)
             <option>{{$type->name}}</option>
             @endforeach
