@@ -57,7 +57,7 @@ class ReservationsController extends Controller
             'start' => 'required',
             'end' => 'required',
             'persons' => 'required',
-            'dog' => 'required',
+            'cat' => 'required',
         ]);
         $reservation = new Reservation;
 
